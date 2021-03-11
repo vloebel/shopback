@@ -4,6 +4,9 @@ const sequelize = require('../config/connection');
 
 class ProductTag extends Model { }
 
+// ProductTag is a through table that links a product_id
+// to the corresponding tag_id
+
 ProductTag.init(
   {
     id: {
@@ -12,6 +15,7 @@ ProductTag.init(
       primaryKey: true,
       autoIncrement: true
     },
+    // product_id: link to product
     product_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -19,6 +23,7 @@ ProductTag.init(
         key: 'id'
       }
     },
+    //tag_id: link to tag
     tag_id: {
       type: DataTypes.INTEGER,
       references: {

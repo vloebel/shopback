@@ -5,39 +5,55 @@ const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 const { belongsTo } = require('./Product');
 
-// Categories have many Products
+
+// Each Category has many products via
+// product.category_id
+
 Category.hasMany(Product, {
   foreignKey: 'category_id'
 });
-// Products belongsTo Category
+
+// Every Product must belong to a Category
+// using the same product.category_id
 Product.belongsTo(Category, {
   foreignKey: 'category_id'
 });
-// Products belongToMany Tags (through ProductTag)
-//vlnote: confused about which foreignKey to use!
+
+// THROUGH TABLE
+//Products belongToMany Tags 
+//via ProductTag.product_id
 Product.belongsToMany(Tag, {
   through: ProductTag,
-  as: 'inventory',
+  as: 'product_type',
   foreignKey: 'product_id'
 });
-// Tags belongToMany Products (through ProductTag)
+// Tags belong to Many Products
+// via ProductTag.tag_id
 Tag.belongsToMany(Product, {
   through: ProductTag,
-  as: 'inventory',
+  as: 'product_type',
     foreignKey: 'tag_id'
 });
-// following the code in the module but don't
-// really see why this has to be double defined:
 
+/////// further associations as per module ??
+
+// ProductTag.product_id links it back to Product
 ProductTag.belongsTo(Product, {
   foreignKey: 'product_id'
 });
+
+//ProductTag.tag_id links it back to tag
 ProductTag.belongsTo(Tag, {
   foreignKey: 'tag_id'
 });
+//////////////////////////
+// associations via through table
+// shouldn't this be product_tag id?
+
 Product.hasMany(ProductTag, {
   foreignKey: 'product_id'
 })
+
 Tag.hasMany(ProductTag, {
   foreignKey: 'tag_id'
 });
