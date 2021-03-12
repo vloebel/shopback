@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
   // also why does product_tag info who up when I didn't include?
   Product.findAll({
     attributes: ['id', 'product_name','price', 'stock'],
-    order: [['product_name', 'ASC']],
+    order: ['product_name', 'ASC'],
     include: [
       {
         model: Category,
@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
         {
           model: Tag,
           attributes: ['tag_name'],
+          through:ProductTag
         }] 
   })
   .then(dbData => res.json(dbData))
@@ -49,6 +50,7 @@ router.get('/:id', (req, res) => {
         {
           model: Tag,
           attributes: ['id', 'tag_name'],
+          through:ProductTag
         }] 
   })
   .then(dbData => res.json(dbData))
