@@ -36,7 +36,13 @@ router.get('/:id', (req, res) => {
         attributes: ['product_name', 'price', 'stock']
       }]
   })
-    .then(dbData => res.json(dbData))
+    .then(dbData => {
+      if (!dbData) {
+        res.status(404).json({ message: `No category found with id: ${req.params.id}`});
+        return;
+      }
+      res.json(dbData);
+    })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -68,7 +74,7 @@ router.put('/:id', (req, res) => {
   })
   .then(dbData => {
     if (!dbData) {
-      res.status(404).json({ message: 'No category found with this id' });
+      res.status(404).json({ message: `No category found with id: ${req.params.id}` });
       return;
     }
     res.json(dbData);
@@ -89,7 +95,7 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbData => {
     if (!dbData) {
-      res.status(404).json({ message: 'No category found with this id' });
+      res.status(404).json({ message: `No category found with id: ${req.params.id}`});
       return;
     }
     res.json(dbData);
