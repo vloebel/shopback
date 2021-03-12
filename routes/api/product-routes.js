@@ -11,18 +11,18 @@ router.get('/', (req, res) => {
   // also why does product_tag info who up when I didn't include?
   Product.findAll({
     attributes: ['id', 'product_name','price', 'stock'],
-    order: ['product_name', 'ASC'],
     include: [
       {
         model: Category,
-        attributes: ['category_name'],
-      }],
-      include: [
-        {
+        attributes: ['id', 'category_name'],
+      },
+    
+      {
           model: Tag,
-          attributes: ['tag_name'],
+          attributes: ['id', 'tag_name'],
           through:ProductTag
-        }] 
+      }
+    ]
   })
   .then(dbData => res.json(dbData))
   
@@ -44,14 +44,15 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Category,
-        attributes: ['category_name'],
-      }],
-      include: [
-        {
+        attributes: ['id', 'category_name'],
+      },
+    
+      {
           model: Tag,
           attributes: ['id', 'tag_name'],
           through:ProductTag
-        }] 
+      }
+    ]
   })
   .then(dbData => res.json(dbData))
   
