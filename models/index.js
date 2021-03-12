@@ -36,29 +36,6 @@ Tag.belongsToMany(Product, {
     foreignKey: 'tag_id'
 });
 
-// /////// further associations as per module ??
-
-// // ProductTag.product_id links it back to Product
-// ProductTag.belongsTo(Product, {
-//   foreignKey: 'product_id'
-// });
-
-// //ProductTag.tag_id links it back to tag
-// ProductTag.belongsTo(Tag, {
-//   foreignKey: 'tag_id'
-// });
-// //////////////////////////
-// // associations via through table
-// // shouldn't this be product_tag id?
-
-// Product.hasMany(ProductTag, {
-//   foreignKey: 'product_id'
-// })
-
-// Tag.hasMany(ProductTag, {
-//   foreignKey: 'tag_id'
-// });
-
 
 module.exports = {
   Product,

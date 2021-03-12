@@ -1,5 +1,5 @@
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
   ![banner](./assets/rm-banner.jpg)
   # shopBack: an e-Commerce backend server
   ## UA Web Coding Bootcamp Challenge - Week 13
@@ -12,7 +12,9 @@
   
   ## Table of Contents  
   * [Installation](#Installation)  
-  * [Usage](#Usage)  
+  * [Usage](#Usage) 
+  * [User_Story](#User_Story)  
+  * [User_Requirements](#User_Requirements)  
   * [Questions](#Questions)    
   * [License](#License)
   ## Installation  
@@ -39,8 +41,29 @@
       On the command line, type "npm run seed"
     
   ## Usage  
-  TO START THE SERVER  - type "npm start" on the terminal command line.   
-  TO INTERFACE WITH THE SERVER - Start a desktop app such as [Insomnia](https://insomnia.rest/) and use the API methods it provides with localhost:3001.
+  * To start the server: 
+    type "npm start" on the terminal command line.   
+  * To interface with the server:  
+    Start a desktop app such as [Insomnia](https://insomnia.rest/) and use the API methods it provides with localhost:3001.
+
+  ## User_Story 
+  AS A manager at an internet retail company  
+  * I WANT a back end for my e-commerce website that uses the latest technologies  
+  * SO THAT my company can compete with other e-commerce companies
+  ## User_Requirements
+  GIVEN a functional Express.js API  
+  * WHEN I add my database name, MySQL username, and MySQL password to an environment variable file  
+    THEN I am able to connect to a database using Sequelize
+  * WHEN I enter schema and seed commands  
+    THEN a development database is created and is seeded with test data  
+  * WHEN I enter the command to invoke the application  
+    THEN my server is started and the Sequelize models are synced to the MySQL database  
+  * WHEN I open API GET routes in Insomnia Core for categories, products, or tags  
+    THEN the data for each of these routes is displayed in a formatted JSON  
+  * WHEN I test API POST, PUT, and DELETE routes in Insomnia Core  
+    THEN I am able to successfully create, update, and delete data in my database  
+
+  ![Insomnia Screenshot](./assets/insomnia.jpg)
 
    
   ## Questions
