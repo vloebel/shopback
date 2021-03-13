@@ -2,13 +2,13 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
   ![banner](./assets/rm-banner.jpg)
   # shopBack: an e-Commerce backend server
-  ## UA Web Coding Bootcamp Challenge - Week 13
+  ## UA Web Coding Bootcamp Challenge - Week 13 
   
   ## Description  
   This project implements the back-end of an e-commerce retail site. It interacts with a MySQL price and inventory database through the node.js Sequelize ORM (Object Relation Map) using an express.js API. There is no front-end. [Insomnia](https://insomnia.rest/) or another similar desktop applications can be used for demonstration and testing.  
 
   ### Link to YouTube Demonstration
-  [ShopBack Youtube demo](https://youtu.be/gbR5yjoPuHk) 
+  [ShopBack Youtube demo](https://www.youtube.com/watch?v=gbR5yjoPuHk) 
   
   ## Table of Contents  
   * [Installation](#Installation)  
