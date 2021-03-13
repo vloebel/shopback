@@ -1,0 +1,17 @@
+localhost:3001/api/products
+
+{
+"product_name": "Basketball",
+"price": 200.00,
+"stock": 3,
+"tagIds": [1, 2, 3, 4]
+}
+
+
+localhost:3001/api/categories
+
+{"category_name":"Housewares"}
+
+localhost:3001/api/tags
+
+{ "tag_name": "rainbow" }

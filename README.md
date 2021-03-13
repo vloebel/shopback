@@ -7,8 +7,10 @@
   ## Description  
   This project implements the back-end of an e-commerce retail site. It interacts with a MySQL price and inventory database through the node.js Sequelize ORM (Object Relation Map) using an express.js API. There is no front-end. [Insomnia](https://insomnia.rest/) or another similar desktop applications can be used for demonstration and testing.  
 
-  ### Link to YouTube Demonstration
-  [ShopBack Youtube demo](https://www.youtube.com/watch?v=gbR5yjoPuHk) 
+  ### Link to YouTube Walkthrough
+  [ShopBack demo part 1](https://www.youtube.com/watch?v=mGzU7Kxb4Gw)   
+  [ShopBack demo part 2](https://www.youtube.com/watch?v=t8qZuBqBj2E)  
+  
   
   ## Table of Contents  
   * [Installation](#Installation)  
